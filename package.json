@@ -1,0 +1,17 @@
+{
+  "name": "paster",
+  "version": "1.0.0",
+  "description": "Paster Server",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Agustin Fernandez",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "unzipper": "^0.10.11"
+  }
+}
