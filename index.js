@@ -34,7 +34,8 @@ app.post('/upload', function(req, res) {
             if(testFile.length == 2){ 
                 console.log("Es zip")
                 let arrDirs = FilPosted.data.name.replace('.zip', '')
-                let preform = arrDirs.split('_')
+                let principal = arrDirs.split('-')
+                let preform = principal[1].split('_')
                 let finaldir = ""
                 preform.map(el=>{
                     finaldir = finaldir + el + "/"
@@ -43,28 +44,21 @@ app.post('/upload', function(req, res) {
                
                 if(!arrDirs) { return res.status(400).json({ status : "No Archivo" }); }
                 else {
-                    console.log('aca',tmp+FilPosted.data.name, troncal+time+finaldir )
+                    console.log('aca',tmp+FilPosted.data.name, troncal+principal[0]+"/"+time+finaldir )
                    
                     try{
                         let file = tmp+FilPosted.data.name
-                        let destino = troncal+time+finaldir
+                        let destino = troncal+principal[0]+"/"+time+finaldir
                         var zip = new AdmZip(file);
                        // zipEntries = zip.getEntries();
-                        zip.extractAllTo(destino, /*overwrite*/true);
-    
+                        zip.extractAllTo(destino, true)
+
                     } catch(err){
                         console.log(err)
                     }
 
-                    // fs.createReadStream(tmp+FilPosted.data.name)
-                    // .pipe(
-                    //     unzipper.Extract(
-                    //         { 
-                    //             path: troncal+time+finaldir 
-                    //         }
-                    //     )
-                    // );
-                 //    fs.unlinkSync(tmp+FilPosted.data.name)
+                    fs.unlinkSync(tmp+FilPosted.data.name)
+                    
                 }
 
             } else { console.log("No es un archivo ZIP") }
