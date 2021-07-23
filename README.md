@@ -1,7 +1,7 @@
 <p align="center">
   <img width="500" src="https://github.com/gusgeek/PasterSync-Server/blob/main/logo.svg">
   <br>
-   PasterSync Herramienta para la subida direccional de contenidos
+  PasterSync Herramienta para la subida direccional de contenidos 
 </p>
 
 
