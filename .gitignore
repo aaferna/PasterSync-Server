@@ -74,3 +74,5 @@ typings/
 
 # FuseBox cache
 .fusebox/
+tmp/pastersync-client-macos
+package-lock.json
