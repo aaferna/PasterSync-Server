@@ -24,3 +24,13 @@
   - Puede especificar mas directorios aplicando _ entre nombres, por ejemplo promociones-ahorros_navidad.zip se ubicara en /promociones/año/mes/dia/ahorros/navidad
 
 
+<p align="center">
+  <br>
+  <bR>
+    <img src="https://img.shields.io/github/downloads/gusgeek/PasterSync-Server/total">  
+    <img src="https://img.shields.io/github/v/release/gusgeek/PasterSync-Server">  
+    <img src="https://img.shields.io/github/release-date/gusgeek/PasterSync-Server">  
+    <img src="https://img.shields.io/github/languages/code-size/gusgeek/PasterSync-Server">
+  <br><br>
+  <strong>:pencil2: con :heart:</strong>
+</p>
